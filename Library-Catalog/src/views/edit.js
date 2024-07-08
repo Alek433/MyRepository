@@ -58,7 +58,7 @@ html`<section id="edit-page" class="edit">
 export function editPage(ctx, id){
     const book = getBookById(id)
     ctx.render(getTemplate(book));
-    document.getElementById('createForm').addEventListener('submit', (event) => onSubmit(event, id));
+    document.getElementById('editForm').addEventListener('submit', (event) => onSubmit(event, id));
 
 }
 async function onSubmit(event, id) {

@@ -1,6 +1,6 @@
-import { html } from '../../node_modules/lit-html/lit-html.js';
+import { html, render } from '../../node_modules/lit-html/lit-html.js';
 
-export function profile(){
+function profile(){
     html` <!-- My Books Page ( Only for logged-in users ) -->
 <section id="my-books-page" class="my-books">
     <h1>My Books</h1>
@@ -23,4 +23,7 @@ export function profile(){
     <!-- Display paragraph: If the user doesn't have his own books  -->
     <p class="no-books">No books in database!</p>
 </section>`
+}
+export function profilePage(){
+    render(profile);
 }
